@@ -1,0 +1,160 @@
+@use './base/myVariables';
+body {
+    margin: 0;
+}
+* {
+    font-family: Onest, sans-serif;
+    box-sizing: border-box;
+}
+.container {
+    margin: 0 auto;
+    width: 1218px;
+    max-width: 96%;
+}
+ul {
+    margin: 0;
+}
+button {
+    border: none;
+    &:focus {
+        outline: none;
+    }
+}
+p {
+    margin: 0
+}
+h3, h2, h1 {
+    margin: 0
+}
+.title {
+    position: relative;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 38.25px;
+    text-align: left;
+    color: myVariables.$black;
+    font-weight: 700;
+    &::after {
+        content: "";
+        position:absolute;
+        width: 32px;
+        height: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -42px;
+        background-size: cover;
+        background-image: url('../vectors/arrow-blue.svg');
+    }
+}
+.main-title {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 45.9px;
+    text-align: left;
+    color: myVariables.$black;
+}
+.subheader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    .navigation-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 47px;
+        margin-top: 15px;
+        align-items: center;
+        .club-panel {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+        }
+    }
+    form {
+        margin-top: 32px;
+    }
+    .outline-buttons-wrapper {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+.clubs-logo-wrapper {
+    display: none;
+    margin-top: 40px;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    .outline_large {
+        display: none
+    }
+}
+.clubs-logo-wrapper-active {
+    display: flex;
+}
+
+@media (max-width:475px) {
+    .container {
+        width: 94.117%;
+        margin: 0 auto;
+    }
+    .title {
+        font-size: 24px;
+        line-height: 36px;
+        &::after {
+            right: -39px;
+        }
+    }
+    .main-title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+    .subheader {
+        margin-top: 90px;
+        .navigation-wrapper {
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+            margin-top: 15px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        .outline-buttons-wrapper {
+            margin-top: 30px;
+            display: flex;
+            justify-content: unset;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 10px;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+    .clubs-logo-wrapper {
+        margin-top: 30px;
+        flex-direction: row;
+        gap: 8px;
+        .outline_large {
+            margin-top: 30px;
+            display: block
+        }
+    }
+
+}
+
+@import './blocks/header';
+@import './blocks/mobile-header';
+@import './items/buttons';
+@import './libs/fonts';
+@import './items/breadcrumbs.scss';
+@import './items/main-search-panel';
+@import './items/outline-club-buttons';
+@import './items/clubs-logo';
+@import './blocks/footer';

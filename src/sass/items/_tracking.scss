@@ -1,0 +1,128 @@
+.tracking-block {
+    .wrapper {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .track-item {
+        height: 56px;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        align-items: flex-end;
+        .track-item__content {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .track-item__title {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 27px;
+            text-align: left;
+            color: #828B92;
+        }
+        .track-item__descr {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            text-align: left;
+            color: #828B92;
+        }
+        .track-item__icon {
+            position: relative;
+            width: 56px;
+            height: 56px;
+            border-radius: 10px;
+            background-color: #F3F8FC;
+            &::after {
+                content: "";
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-color: #AFB8BF;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                height: 40px;
+                width: 1px;
+                background-color: #E2EBF1;
+                bottom: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    .track-item:first-child {
+        .track-item__icon::before {
+            display: none;
+        }
+    }
+    .track-item.active {
+        .track-item__icon {
+            background-color: myVariables.$blue;
+            &::before {
+                width: 2px;
+                background-color: myVariables.$blue;
+            }
+            &::after {
+                background-color: #fff;
+            }
+        }
+    }
+    .track-item.create .track-item__icon::after {
+        mask-image: url('../vectors/purchase-box.svg');
+    }
+    .track-item.confirm .track-item__icon::after {
+        mask-image: url('../vectors/Icon.svg');
+    }
+    .track-item.delivery .track-item__icon::after {
+        mask-image: url('../vectors/truck-fast-mask.svg');
+    }
+    .track-item.done .track-item__icon::after {
+        mask-image: url('../vectors/done-mask.svg');
+    }
+    
+    
+}
+
+
+
+@media (max-width:475px) {
+    .tracking-block {
+        .wrapper {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+        }
+        .track-item {
+            height: 71px;
+            align-items: flex-start;
+            .track-item__title {
+                font-family: Onest;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+                text-align: left;
+                color: #828B92;
+            }
+            .track-item__descr {
+                width: 190px;
+            }
+            .track-item__icon {
+                position: relative;
+                width: 48px;
+                height: 48px;
+                border-radius: 7px;
+            }
+        }
+    }
+}

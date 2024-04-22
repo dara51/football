@@ -1,0 +1,134 @@
+.catalog-menu, .search-menu {
+    display: none;
+}
+.mobile-expand-menu {
+    position: relative;
+    height: 100vh;
+    z-index: 11;
+    padding: 20px 10px;
+    padding-bottom: 87px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .menu__title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: left;
+        color:#212324 ;
+
+    }
+}
+.interactive-title {
+    position: relative;
+    padding-left:40px ;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        background-image: url('../vectors/arrow-blue.svg');
+    }
+}
+.mobile-expand-menu.child-menu,.mobile-expand-menu.adult-menu,.mobile-expand-menu.atributika-menu,.mobile-expand-menu.sale-menu,.mobile-expand-menu.team-menu,.mobile-expand-menu.season-menu {
+    z-index: 12;
+    background-color: #ffff;
+    display: none;
+}
+.players-menu {
+    display: none;
+    z-index: 13;
+    background-color: #ffff;
+}
+.mobile-simple-list {
+    padding-left: 0;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+    color: #212324;
+    font-family: Onest;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    a {
+        text-decoration: none;
+        color: #212324;
+    }
+
+}
+.mobile-expand-ul {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+    list-style: none;
+    padding: 0;
+    li {
+        overflow: hidden;
+        height: 47px;
+        display: flex;
+        align-items: center;
+        // flex-direction: column;
+        flex-wrap: wrap;
+        overflow: hidden;
+        position: relative;
+        font-size: 18px;
+        color: #212324;
+        line-height: 27px;
+        font-weight: 700;
+        text-align: left;
+        border-bottom: 1px solid #E2EBF1;
+        a {
+            font-size: 18px;
+            line-height: 27px;
+            color: #212324;
+            text-decoration: none;
+        }
+        p {
+            height: 47px;
+        }
+        &::after {
+            content: "";
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            right: 0;
+            top: 11px;
+            background-size: cover;
+            background-image: url('../vectors/Arrow-grey.svg');
+            transform: rotate(180deg);
+        }
+        .mobile-menu-flex {
+            margin-top: 15px;
+            gap: 7px;
+            flex-wrap: wrap;
+            padding-bottom:10px ;
+            display: none;
+        }
+    }
+    .expand-li {
+        &::after {
+            transform: rotate(-90deg);
+        }
+    }
+    .expand-li.active {
+        height: auto;
+        &::after {
+            top: 0;
+            transform: rotate(90deg);
+        }
+        .li-expand-content {
+            display: flex;
+        }
+    }
+
+}

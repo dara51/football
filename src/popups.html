@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/ui.css">
+    <link rel="stylesheet" href="./css/popups.css">
+    <link rel="stylesheet" href="./css/ui-popup-mixin.css">
+</head>
+<body>
+    <div class="main-content">
+        <div class="container">
+            <div class="items-wrapper">
+                <div class="sizes-popup">
+                    <div class="img-wrapper">
+                        <img src="./img/t-shirt.png" alt="размер футболки"><img src="./img/shorts.png" alt="размер шорт">
+                    </div>
+                    <div class="sizes-table">
+                        <div class="sizes-table__legend">
+                            <div class="sizes-table__column">Размер</div><div class="sizes-table__column">Возраст</div><div class="sizes-table__column">Рост</div>
+                        </div>
+                        <div class="sizes-table__row">
+                            <div class="sizes-table__column">XXXS - 16</div><div class="sizes-table__column">1-3 года</div><div class="sizes-table__column">95-105</div>
+                        </div>
+                        <div class="sizes-table__row">
+                            <div class="sizes-table__column">XXS - 18</div><div class="sizes-table__column">3-4 года</div><div class="sizes-table__column">105-115</div>
+                        </div>
+                        <div class="sizes-table__row">
+                            <div class="sizes-table__column">XS - 20</div><div class="sizes-table__column">4-5 лет</div><div class="sizes-table__column">115-125</div>
+                        </div>
+                        <div class="sizes-table__row active">
+                            <div class="sizes-table__column">S - 20</div><div class="sizes-table__column">6-7 лет</div><div class="sizes-table__column">125-135</div>
+                        </div>
+                        <div class="sizes-table__row">
+                            <div class="sizes-table__column">M - 24</div><div class="sizes-table__column">8-9 лет</div><div class="sizes-table__column">135-145</div>
+                        </div>
+                        <div class="sizes-table__row">
+                            <div class="sizes-table__column">L</div><div class="sizes-table__column">10-11 лет</div><div class="sizes-table__column">145-155</div>
+                        </div>
+                        <div class="sizes-table__row">
+                            <div class="sizes-table__column">XL</div><div class="sizes-table__column">12-14 лет</div><div class="sizes-table__column">155-165</div>
+                        </div>
+                    </div>
+                    <button class="simple-button_large">Применить</button>
+                    <div class="sizes-modal__close"></div>
+                </div>
+                <div class="application-popup">
+                    <div class="application-close"></div>
+                    <div class="application-popup__header">
+                        <div class="icon-wrapper">
+                            <div class="icon"><img src="./img/child-messi-form.png" alt="нанесение номера"></div>
+                            <div class="icon-button"></div>
+                        </div>
+                        <div class="application-header__content">
+                            <div class="header-title">Нанесение<br>фамилии и номера</div>
+                            <div class="header-subtitle">Шорты уже включены в стоимость</div>
+                        </div>
+                
+                    </div>
+                    <form action="#" class="application-popup-form">
+                        <div class="input-wrapper">
+                            <input type="text" name = "name" placeholder="Фамилия" class="family-input">
+                            <input type="text" name = "number" placeholder="Номер" class="number-input">
+                        </div>
+                        <div class="select-wrapper">
+                            <label for="player-select">Или выберите игрока</label>
+                            <select name="player" id="player-select" class="player-select">
+                                <option class="player-option" value="player">Игрок</option>
+                                <option class="player-option" value="player">Игрок</option>
+                                <option class="player-option" value="player">Игрок</option>
+                                <option class="player-option" value="player">Игрок</option>
+                            </select>
+                        </div>
+                        <button class="simple-button">Применить</button>
+                    </form>
+                </div>
+                <div class="patches-modal">
+                    <div class="patches-title">
+                        Патчи лиги чемпионов
+                    </div>
+                    <div class="patches-form">
+                        <div class="input-wrapper">
+                            <div class="patches-input active"><img src="./img/image-22.png" alt="Нашивка"></div>
+                            <div class="patches-input"><img src="./img/image-22.png" alt="Нашивка"></div>
+                
+                        </div>
+                        <button class="patches-button">Применить</button>
+                    </div>
+                    <div class="patches-close"></div>
+                </div>
+                <div class="socks-modal">
+                    <div class="socks-icon"><img src="./img/socks.png" alt="Гетры"></div>
+                    <div class="socks-form">
+                        <div class="socks-title">Выберите размер</div>
+                        <div class="input-wrapper">
+                            <div class="socks-input active">26-30</div>
+                            <div class="socks-input">31-36</div>
+                            <div class="socks-input">37-41</div>
+                        </div>
+                        <button class="socks-button">Применить</button>
+                    </div>
+                    <div class="socks-close"></div>
+                </div>
+                <div class="cart-popup">
+                    <div class="cart-popup__subtitle">Товар добавлен в корзину</div>
+                    <div class="cart-popup-container">
+                        <div class="cart-icon"><img src="./img/real-form.png" alt="Иконка товара"></div>
+                        <div class="cart-popup__content">
+                            <div class="cart-popup__title">Детская форма ПСЖ Неймар 10 2021-2022 длинный рукав</div>
+                            <div class="cart-popup-options-wrapper">
+                                <div class="cart-popup-option">Размер: XXXS 95-105</div><div class="cart-popup-option">Нанесение: Иванов 35</div><div class="cart-popup-option">Гетры: 95-105</div><div class="cart-popup-option">Патчи: -</div>
+                            </div>
+                            <div class="price">15 999 ₽</div>
+                            <div class="buttons-wrapper">
+                                <button class="cart-popup-button">Перейти в корзину</button>
+                                <button class="cart-popup-button_outline">продолжить покупки</button>
+                            </div>
+                        </div>
+                        <div class="cart-popup-close"></div>
+                    </div>
+                </div>
+                <div class="one-click-popup">
+                    <div class="single-close"></div>
+                    <p class="one-click-title">Купить в 1 клик</p>
+                    <form action="#" class="order-main-wrapper">
+                        <div class="placing">
+                            <div class="placing-wrapper">
+                                <div class="placing-block">
+                                    <p class="title-small">Адрес доставки</p>
+                                    <div class="input-wrapper">
+                                        <label for="city">Город или область</label>
+                                        <input type="text" id="city" name="city" placeholder="Великий Новгород">
+                                    </div>
+                                </div>
+                                <div class="placing-block">
+                                    <p class="title-small">Способ доставки</p>
+                                        <div class="delyvery-item interactive wide">
+                                            <p class="delivery-item__title">Экспресс доставка внутри МКАД</p>
+                                            <div class="wrapper">
+                                                <div class="price">500 ₽</div><div class="term">Сегодня</div>
+                                            </div>
+                                            <p class="delyvery-item__subtitle">
+                                                при предоплате за доставку*
+                                            </p>
+                                            <label for="delivery-item__radio-1"></label>
+                                            <input type="radio" name="delyvery" class="delivery-item__radio" id="delivery-item__radio-1">
+                                            <div class="custom-checkbox"></div>
+                                        </div>
+                                        <div class="delyvery-item interactive wide">
+                                            <p class="delivery-item__title">Доставка курьером</p>
+                                            <div class="wrapper">
+                                                <div class="price">300 ₽</div><div class="term">1-2 дня</div>
+                                            </div>
+                                            <p class="delyvery-item__subtitle">
+                                                оплата при получении наличными
+                                            </p>
+                                            <label for="delivery-item__radio-2"></label>
+                                            <input type="radio" name="delyvery" class="delivery-item__radio" id="delivery-item__radio-2">
+                                            <div class="custom-checkbox"></div>
+                                        </div>
+                                        <div class="delyvery-item interactive wide">
+                                            <p class="delivery-item__title">ТК СДЭК</p>
+                                            <div class="wrapper">
+                                                <div class="price">Бесплатно</div><div class="term">2-3 днч</div>
+                                            </div>
+                                            <p class="delyvery-item__subtitle">
+                                                по предоплате за заказ, за доставку оплата при получении*
+                                            </p>
+                                            <label for="delivery-item__radio-3"></label>
+                                            <input type="radio" class="delivery-item__radio" name="delyvery" id="delivery-item__radio-3">
+                                            <div class="custom-checkbox"></div>
+                                        </div>
+                                </div>
+                                <div class="placing-block">
+                                    <p class="title-small">Получатель</p>
+                                    <div class="input-wrapper">
+                                        <label for="name">Фамилия Имя</label>
+                                        <input type="text" id="name" name="name" placeholder="Семенов семен">
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <label for="city">Улица, дом, корпус, квартира</label>
+                                        <input type="text" id="adress" name="adress" placeholder="Большая Московская, д.122, кв 310">
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" placeholder="email@example.com">
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <label for="phone">Номер телефона</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="+7 911 609-75-85">
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <label for="comment">Комментарий к заказу</label>
+                                        <textarea name="comment" id="comment" placeholder="Ваш комментарий"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <p class="title-small">Ваш заказ:</p>
+                            <div class="wrapper">
+                                <div class="values-wrapper">
+                                    <div class="values-row">
+                                        <div class="values__title">3 товара на сумму:</div>
+                                        <div class="filler"></div>
+                                        <div class="values__content">3 150</div>
+                                    </div>
+                                    <div class="values-row">
+                                        <div class="values__title">Скидка:</div>
+                                        <div class="filler"></div>
+                                        <div class="values__content">315</div>
+                                    </div>
+                                    <div class="values-row">
+                                        <div class="values__title">К оплате:</div>
+                                        <div class="filler"></div>
+                                        <div class="values__content total">2 835</div>
+                                    </div>
+                                </div>
+                                <button class="simple-button_large">Оформить заказ</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

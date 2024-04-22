@@ -1,0 +1,72 @@
+.outline-clubs {
+    position: relative;
+    border-radius: 82px;
+    padding-right: 15px;
+    padding-left: 53px;
+    height: 39px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    color: myVariables.$black;
+    font-size: 16px;
+    font-weight: 400;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 28px;
+        height: 20px;
+        background-size: cover;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 3px;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+.outline-clubs.holland {
+    &::after {
+        background-image: url('../vectors/holland.svg');
+    }
+}
+.outline-clubs.russia {
+    &::after {
+        background-image: url('../vectors/russia.svg');
+    }
+}
+.outline-clubs.brasil {
+    &::after {
+        background-image: url('../vectors/brasil.svg');
+    }
+}
+.outline-clubs.france {
+    &::after {
+        background-image: url('../vectors/france.svg');
+    }
+}
+.outline-clubs.portu {
+    &::after {
+        background-image: url('../vectors/portu.svg');
+    }
+}
+.outline-clubs.england {
+    &::after {
+        background-image: url('../vectors/britain.svg');
+    }
+}
+.outline-clubs.argentina {
+    &::after {
+        background-image: url('../vectors/argentina.svg');
+    }
+}
+.outline-clubs.spain {
+    &::after {
+        background-image: url('../vectors/spain.svg');
+    }
+}
+@media (max-width:475px) {
+    .outline-clubs {
+        flex-shrink: 0;
+    }
+}

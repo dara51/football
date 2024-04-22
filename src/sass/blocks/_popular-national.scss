@@ -1,0 +1,14 @@
+.popular-nationals {
+    .popular-national__title {
+        width:324px ;
+    }
+}
+
+@media(max-width:475px) {
+    .popular-nationals {
+        margin-top: 30px;
+        .popular-national__title {
+            width:262px ;
+        }
+    }
+}

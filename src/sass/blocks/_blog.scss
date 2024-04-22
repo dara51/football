@@ -1,0 +1,23 @@
+@import '../items/blog-carousel';
+@import '../blocks/seoblock';
+.blog {
+    margin-top: 60px;
+    .title {
+        width: 260px;
+    }
+    .carousel-blog-wrapper {
+        margin-top: 40px;
+    }
+}
+@media (max-width:475px) {
+    .blog {
+        margin-top: 30px;
+        .title {
+            width:206px;
+        }
+        .carousel-blog-wrapper {
+            margin-top: 15px;
+        }
+    }
+    
+}

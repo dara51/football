@@ -1,0 +1,47 @@
+@import '../items/.popular-atributika-item';
+.container-atributika {
+    width: 1282px;
+    max-width: 100%;
+}
+.atributika-nav {
+    .atributika-block {
+        width: 865px;
+        .wrapper {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 6px;
+            width: 100%;
+        }
+        .nav-atibutika-item {
+            padding: 15px 10px;
+            width: 205px;
+            height: 76px;
+            border-radius: 10px;
+            border: 1px solid #E2EBF1;
+            text-decoration: none;
+        }
+        .atributika-nav-item-content {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+        }
+        .atributika-nav-item__title {
+            font-weight: 400;
+            line-height: 21px;
+            text-align: left;
+            color: #273E4F;
+
+        }
+    }
+    .popular-block {
+        .wrapper {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}

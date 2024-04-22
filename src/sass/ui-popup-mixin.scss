@@ -1,0 +1,12 @@
+.items-wrapper {
+    .sizes-popup,.application-popup, .patches-modal, .socks-modal, .cart-popup  {
+        transform: none;
+        display: block;
+        position:relative;
+        left: auto;
+        top: auto;
+    }
+    .socks-modal {
+        display: flex;
+    }
+}

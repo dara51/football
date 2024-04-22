@@ -1,0 +1,62 @@
+
+@use './base/myVariables';
+@import './items/order-item';
+@import './items/placing';
+@import './items/delyvery-item';
+
+.one-click-popup {
+    position: relative;
+    max-width: 100%;
+    width: 658px;
+    padding: 30px;
+    box-shadow: 0px 4px 70px 0px #0000001A;
+    .single-close {
+        cursor: pointer;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        background-size: cover;
+        background-image: url('../vectors/close.svg');
+        width: 36px;
+        height: 36px;
+    }
+    .order-main-wrapper {
+        margin-top: 40px;
+    }
+    .one-click-title {
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 45.9px;
+        text-align: left;
+        color: #212324;
+    }
+    .title-small {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: left;
+        color: #000000;
+    }
+    .order-item {
+        margin-top: 17px;
+        width: 100%;
+    }
+    .wrapper {
+        width:326px;
+    }
+}
+@media (max-width:475px) {
+    .one-click-popup {
+        .one-click-title {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        .title-small {
+            font-size: 20px;
+            line-height: 27px;
+        }
+        .wrapper {
+            width: auto;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@import '../items/banner-number';
+.atributika {
+    margin-top: -80px;
+    .title {
+        width:179px;
+    }
+    .atributika-wrapper {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+    .banner-number {
+        margin-top: 38px;
+    }
+}
+
+
+@media (max-width:475px) {
+    .atributika {
+        margin-top: 30px;
+        .title {
+            width: 142px;
+        }
+        .atributika-wrapper {
+            margin-top: 20px;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+        .banner-number {
+            margin-top: 30px;
+        }
+    }
+}

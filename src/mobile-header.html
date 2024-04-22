@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/ui.css">
+    <link rel="stylesheet" href="./css/mobile-header.css">
+    
+</head>
+<body>
+    <div class="main-content">
+        <div class="container">
+           <div class="mobile-container">
+                <header class="mobile-header">
+                    <div class="container">
+                        <div class="mobile-logo"><img src="./img/Logo.png" alt="soccer-forma"></div>
+                        <div class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                <div class="mobile-menu">
+                    <div class="close-btn"></div>
+                    <nav class="navigation-panel">
+                        <div class="navigation-item navigation-item-active navigation-main" data-expand="mobile-main-menu">
+                            <div class="navigation-icon"></div>
+                            <p class="navigation-title">Главная</p>
+                        </div>
+                        <div class="navigation-item navigation-catalog" data-expand="catalog-menu">
+                            <div class="navigation-icon"></div>
+                            <p class="navigation-title">Каталог</p>
+                        </div>
+                        <div class="navigation-item navigation-search" data-expand="search-menu">
+                            <div class="navigation-icon"></div>
+                            <p class="navigation-title">Главная</p>
+                        </div>
+                        <div class="navigation-item navigation-track">
+                            <div class="navigation-icon"></div>
+                            <p class="navigation-title">Отследить</p>
+                        </div>
+                        <div class="navigation-item navigation-cart">
+                            <div class="navigation-icon"></div>
+                            <p class="navigation-title">Корзина</p>
+                        </div>
+                    </nav>
+                    <!-- менюшки третьего уровня вложенности -->
+                    <nav class="mobile-expand-menu players-menu">
+                        <div class="menu__title interactive-title">Игроки</div>
+                            <ul class="mobile-simple-list">
+                                <li><a href="#">Лионель Месси</a></li>
+                                <li><a href="#">Мохаммед Саллах</a></li>
+                                <li><a href="#">Криштиану Роналду</a></li>
+                                <li><a href="#">Мохаммед Саллах</a></li>
+                                <li><a href="#">Килиан Мбаппе</a></li>
+                                <li><a href="#">Роберт Левандовский</a></li>
+                                <li><a href="#">Рахим Стерлинг</a></li>
+                                <li><a href="#">Алиссон Беккер</a></li>
+                                <li><a href="#">Френки де йонг</a></li>
+                                <li><a href="#">Роберто Фирмино</a></li>
+                                
+                            </ul>
+                    </nav>
+                    <!-- менюшки второго уровня вложенности -->
+                    <nav class="mobile-expand-menu child-menu">
+                        <div class="menu__title interactive-title">Детская форма</div>
+                        <ul class="mobile-expand-ul child-ul">
+                            <li class="expand-li">
+                                Полулярное
+                                <div class="mobile-menu-flex li-expand-content">
+                                    <div class="clubs-logo">
+                                        <img src="./img/psg.png" alt="psg" class="clubs-icon">
+                                        <h3 class="clubs-title">ПСЖ</h3>
+                                    </div>
+                                    <div class="clubs-logo">
+                                        <img src="./img/real.png" alt="реал мадрид" class="clubs-icon">
+                                        <h3 class="clubs-title">Реал Мадрид</h3>
+                                    </div>
+                                    <div class="clubs-logo">
+                                        <img src="./img/city.png" alt="манчестер сити" class="clubs-icon">
+                                        <h3 class="clubs-title">Манчестер Сити</h3>
+                                    </div>
+                                    <div class="clubs-logo">
+                                        <img src="./img/av.png" alt="астон вилла" class="clubs-icon">
+                                        <h3 class="clubs-title">Астон Вилла</h3>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catolog-interactive-li" data-expand="players-menu">Игроки</li>
+                            <li>Клубы</li>
+                            <li>Сборные</li>
+                            <li>Категории</li>
+                        </ul>
+                    </nav>
+                    <nav class="mobile-expand-menu adult-menu">
+                        <div class="menu__title interactive-title">Взрослая форма</div>
+                            <ul class="mobile-expand-ul child-ul">
+                                <li>Популярное</li>
+                                <li>Игроки</li>
+                                <li>Клубы</li>
+                                <li>Сборные</li>
+                                <li>Категории</li>
+                            </ul>
+                    </nav>
+                    <nav class="mobile-expand-menu atributika-menu">
+                        <div class="menu__title interactive-title">Атрибутика</div>
+                                <ul class="mobile-simple-list">
+                                    <li><a href="#">Мячи</a></li>
+                                    <li><a href="#">Носки</a></li>
+                                    <li><a href="#">Кружки</a></li>
+                                    <li><a href="#">Капитанские повязки</a></li>
+                                    <li><a href="#">Шарфы</a></li>
+                                    <li><a href="#">Брелки</a></li>
+                                    <li><a href="#">Перчатки</a></li>
+                                    <li><a href="#">Чулки и фиксатор</a></li>
+                                    <li><a href="#">Гетры</a></li>
+                                    <li><a href="#">Полотенца</a></li>
+                                    <li><a href="#">Чулки и фиксаторы для чулков</a></li>
+                                    <li><a href="#">Сумки</a></li>
+                                    <li><a href="#">Рюкзаки</a></li>
+                                    
+                                </ul>
+                        </nav>
+                        <nav class="mobile-expand-menu sale-menu">
+                            <div class="menu__title interactive-title">Атрибутика</div>
+                            <ul class="mobile-expand-ul child-ul">
+                                <li>Популярное</li>
+                                <li>Игроки</li>
+                                <li>Клубы</li>
+                                <li>Сборные</li>
+                                <li>Категории</li>
+                            </ul>
+                        </nav>
+                        <nav class="mobile-expand-menu team-menu">
+                            <div class="menu__title interactive-title">На команду</div>
+                            <ul class="mobile-expand-ul child-ul">
+                                <li>Популярное</li>
+                                <li>Игроки</li>
+                                <li>Клубы</li>
+                                <li>Сборные</li>
+                                <li>Категории</li>
+                            </ul>
+                        </nav>
+                        <nav class="mobile-expand-menu season-menu">
+                            <div class="menu__title interactive-title">Новый сезон</div>
+                            <ul class="mobile-expand-ul child-ul">
+                                <li>Популярное</li>
+                                <li>Игроки</li>
+                                <li>Клубы</li>
+                                <li>Сборные</li>
+                                <li>Категории</li>
+                            </ul>
+                        </nav>
+                <!-- первый уровень вложенности -->
+                    <nav class="catalog-menu mobile-expand-menu">
+                        <div class="menu__title">Каталог</div>
+                        <ul class="mobile-expand-ul">
+                            <li class="catolog-interactive-li" data-expand="adult-menu">Взрослая Форма</li>
+                            <li class="catolog-interactive-li" data-expand="child-menu"> Детская форма</li>
+                            <li class="catolog-interactive-li" data-expand="atributika-menu">Атрибутика</li>
+                            <li class="catolog-interactive-li" data-expand="sale-menu">Распродажа</li>
+                            <li class="catolog-interactive-li" data-expand="team-menu">На команду</li>
+                            <li class="catolog-interactive-li" data-expand="season-menu">Новый Сезон</li>
+                        </ul>     
+                    </nav>
+                
+                    <nav class="mobile-expand-menu search-menu">
+                        <div class="head-wrapper">
+                            <div class="menu__title">Поиск товаров</div>
+                            <form action="#" class="mobile-search-form">
+                                <input type="search" placeholder="Я хочу найти" name="query">
+                            </form>
+                        </div>
+                        <div class="wrapper">
+                            <div class="goods">
+                                <img src="./img/real-form.png" alt="Реал мадрид" class="good__icon">
+                                <div class="goods__content">
+                                    <div class="star-rating">4,5</div>
+                                    <div class="goods__price-wrapper">
+                                        <div class="content__labels">
+                                            <div class="content-label label-sale">-20%</div>
+                                            <div class="content-label second-sale-label">Скидка</div>
+                                        </div>
+                                        <div class="price-wrapper">
+                                            <p class="price">15999 &#8381;</p>
+                                            <p class="old-price">19200 &#8381;</p>
+                                        </div>
+                                    </div>
+                                    <p class="goods__descr">Детская форма ПСЖ Неймар 10<br>2021-2022 длинный рукав</p>
+                                    <div class="goods__sizes">
+                                        <div class="size">S</div>
+                                        <div class="size">M</div>
+                                        <div class="size">L</div>
+                                        <div class="size">XL</div>
+                                    </div>
+                                    <button class="goods-button">
+                                    <img src="./vectors/white-cart.svg" alt="Корзина"> В корзину
+                                    </button>
+                                    <a href="№" class="one-click">Купить в 1 клик</a>
+                
+                                </div>
+                            </div>
+                            <div class="goods">
+                                <img src="./img/real-form.png" alt="Реал мадрид" class="good__icon">
+                                <div class="goods__content">
+                                    <div class="star-rating">4,5</div>
+                                    <div class="goods__price-wrapper">
+                                        <div class="content__labels">
+                                            <div class="content-label label-sale">-20%</div>
+                                            <div class="content-label second-sale-label">Скидка</div>
+                                        </div>
+                                        <div class="price-wrapper">
+                                            <p class="price">15999 &#8381;</p>
+                                            <p class="old-price">19200 &#8381;</p>
+                                        </div>
+                                    </div>
+                                    <p class="goods__descr">Детская форма ПСЖ Неймар 10<br>2021-2022 длинный рукав</p>
+                                    <div class="goods__sizes">
+                                        <div class="size">S</div>
+                                        <div class="size">M</div>
+                                        <div class="size">L</div>
+                                        <div class="size">XL</div>
+                                    </div>
+                                    <button class="goods-button">
+                                    <img src="./vectors/white-cart.svg" alt="Корзина"> В корзину
+                                    </button>
+                                    <a href="№" class="one-click">Купить в 1 клик</a>
+                
+                                </div>
+                            </div>
+                            <div class="goods">
+                                <img src="./img/real-form.png" alt="Реал мадрид" class="good__icon">
+                                <div class="goods__content">
+                                    <div class="star-rating">4,5</div>
+                                    <div class="goods__price-wrapper">
+                                        <div class="content__labels">
+                                            <div class="content-label label-sale">-20%</div>
+                                            <div class="content-label second-sale-label">Скидка</div>
+                                        </div>
+                                        <div class="price-wrapper">
+                                            <p class="price">15999 &#8381;</p>
+                                            <p class="old-price">19200 &#8381;</p>
+                                        </div>
+                                    </div>
+                                    <p class="goods__descr">Детская форма ПСЖ Неймар 10<br>2021-2022 длинный рукав</p>
+                                    <div class="goods__sizes">
+                                        <div class="size">S</div>
+                                        <div class="size">M</div>
+                                        <div class="size">L</div>
+                                        <div class="size">XL</div>
+                                    </div>
+                                    <button class="goods-button">
+                                    <img src="./vectors/white-cart.svg" alt="Корзина"> В корзину
+                                    </button>
+                                    <a href="№" class="one-click">Купить в 1 клик</a>
+                
+                                </div>
+                            </div>
+                            <div class="goods">
+                                <img src="./img/real-form.png" alt="Реал мадрид" class="good__icon">
+                                <div class="goods__content">
+                                    <div class="star-rating">4,5</div>
+                                    <div class="goods__price-wrapper">
+                                        <div class="content__labels">
+                                            <div class="content-label label-sale">-20%</div>
+                                            <div class="content-label second-sale-label">Скидка</div>
+                                        </div>
+                                        <div class="price-wrapper">
+                                            <p class="price">15999 &#8381;</p>
+                                            <p class="old-price">19200 &#8381;</p>
+                                        </div>
+                                    </div>
+                                    <p class="goods__descr">Детская форма ПСЖ Неймар 10<br>2021-2022 длинный рукав</p>
+                                    <div class="goods__sizes">
+                                        <div class="size">S</div>
+                                        <div class="size">M</div>
+                                        <div class="size">L</div>
+                                        <div class="size">XL</div>
+                                    </div>
+                                    <button class="goods-button">
+                                    <img src="./vectors/white-cart.svg" alt="Корзина"> В корзину
+                                    </button>
+                                    <a href="№" class="one-click">Купить в 1 клик</a>
+                
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                
+                    <nav class="mobile-expand-menu mobile-main-menu">
+                        <div class="logo-wrapper">
+                            <a href="#" class="mobile-logo">
+                                <img src="./img/Logo.png" alt="soccer-forma">
+                            </a>
+                        </div>
+                        <div class="wrapper">
+                            <ul>
+                                <li><a href="#">Взрослая форма</a></li>
+                                <li><a href="#">Детская форма</a></li>
+                                <li><a href="#">Атрибутика</a></li>
+                                <li><a href="#">Распродажа</a></li>
+                                <li><a href="#">На команду</a></li>
+                                <li><a href="#">Новый Сезон</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Доставка и оплата</a></li>
+                                <li><a href="#">Как сделать заказ</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Блог</a></li>
+                                <li><a href="#">О нас</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                            <div class="main-menu-footer">
+                                <div class="first-block">
+                                    <div class="city">Санкт-Петербург</div>
+                                    <a href="tel:+78002202067" class="first-block__number">8 800 200 20 67</a>
+                                </div>
+                                <div class="main-menu-footer__social">
+                                    <a href="#" class="social-icon"><img src="./vectors/telegram.svg" alt="телеграм"></a>
+                                    <a href="#" class="social-icon"><img src="./vectors/whatsapp.svg" alt="ватсапп"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                </header>
+            </div>
+        </div>
+    </div>
+    <script src="./js/mobileHeader.js" ></script>
+</body>
+</html>

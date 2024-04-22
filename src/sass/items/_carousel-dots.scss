@@ -1,0 +1,32 @@
+.dot-container {
+    z-index: 4;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    .dot-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .dot {
+            cursor: pointer;
+            transition: .5s;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: #D9D9D9;
+            opacity: .2;
+        }
+        .dot-active {
+            opacity: 1;
+        }
+
+    }
+}
+@media (max-width:475px) {
+    .dot-container {
+        bottom: 14px;
+    }
+}

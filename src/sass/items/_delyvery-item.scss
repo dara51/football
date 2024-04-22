@@ -1,0 +1,196 @@
+.delyvery-item {
+    width: 32.183%;
+    padding:15px 20px;
+    padding-bottom: 10px;
+    border: 1px solid #E2EBF1;
+    border-radius:10px;
+    min-height: 141px;
+    .delivery-item__title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        color: #212324;
+    }
+    .wrapper {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        .price-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap:15px;
+        }
+        .old-price {
+            padding: 0px 4px;
+            position: relative;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: left;
+            color: #212324;
+            &::after {
+                position: absolute;
+                content: "";
+                height: 1px;
+                width: 100%;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color:#E42DC7 ;
+            }
+        }
+        .price {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: left;
+            color: myVariables.$black;
+        }
+        .term {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-left: 30px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            text-align: left;
+            color: #212324;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-size: cover;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url('../vectors/delivery.svg');
+                background-position: center center;
+            }
+
+        }
+
+    }
+    .delyvery-item__subtitle{
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color:#828B92 ;
+
+    }
+    .delivery-options-wrapper {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+    .delivery-option {
+        width: calc(50% - 15px);
+        padding-right: 15px;
+        border-right: 1px solid #D2DBE2;
+        .price {
+            margin-top: 10px;
+        }
+        &:nth-child(2) {
+            border-right: none;
+        }
+    }
+    .option-icon {
+        width: 61px;
+        height: 31px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .option-descr {
+        margin-top: 5px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: left;
+
+    }
+    
+
+}
+.delyvery-item.wide {
+    width: 598px;
+    max-width: 100%;
+}
+.delyvery-item.interactive {
+    // max-width: 598px;
+    label {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    position: relative;
+    min-height: auto;
+    height: auto;
+    .delyvery-item__subtitle {
+        margin-top: 10px;
+    }
+    input[type=radio] {
+        display: none;
+    }
+    .custom-checkbox {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background-color: #E2EBF1;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #E42DC7;
+            display: none;
+        }
+    }
+    
+}
+.delyvery-item.interactive input:checked~.custom-checkbox::before {
+    display: block;
+}
+.delyvery-item.interactive.active {
+    border: 1px solid #E42DC7 ;
+}
+@media (max-width:475px) {
+    .delyvery-item {
+        width: 100%;
+        padding:15px;
+        padding-bottom: 10px;
+        border: 1px solid #E2EBF1;
+        border-radius:10px;
+        min-height: 117px;
+        .delivery-item__title {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: left;
+            color: #212324;
+        }
+        .delyvery-item__subtitle{
+            margin-top: 10px;
+        }
+    }
+    .delyvery-item.interactive .custom-checkbox {
+        top: 45px;
+    }
+}

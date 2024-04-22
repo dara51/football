@@ -1,0 +1,114 @@
+@import '../items/checkbox';
+@import '../items/filter-price';
+.filter-nav {
+    width: 350px;
+    max-width: 100%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: myVariables.$grey1;
+    padding: 30px;
+    padding-top: 37px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .close-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        cursor: pointer;
+    }
+    .filter-nav-title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: left;
+        color: myVariables.$black;
+    }
+    form {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        .filter-submit {
+            margin-top: 43px;
+        }
+        .filter-outline {
+            margin-top: 10px;
+        }
+        .filter-list-item {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(226, 235, 241, 1);
+            &:nth-child(11n) {
+                border-bottom: none;
+            }
+            .filter-item__title {
+                position: relative;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 27px;
+                text-align: left;
+                color: myVariables.$black;
+                width: 100%;
+                cursor: pointer;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 24px;
+                    width: 24px;
+                    top: 0px;
+                    right: 1px;
+                    // background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    mask-image: url('../vectors/arrow-down.svg');
+                    background-color: #647079;
+
+                } 
+            }
+            .filter-item__content {
+                display: none;
+                flex-direction: column;
+                gap: 15px;
+
+            }
+        }
+        .filter-list-item-active {
+            .filter-item__title::after {
+                transform: rotate(180deg);
+                background-color: myVariables.$blue;
+            }
+            .filter-item__content {
+                display: flex;
+            }
+        }
+    }
+}
+@media (max-width:475px) {
+    .filter-nav {
+        padding: 20px 10px;
+        width: 100%;
+        height: 100vh;
+        .close-button {
+            top: 20px;
+            right: 10px;
+        }
+        form {
+            margin-top: 20px;
+            .filter-list-item {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                .filter-item__title::after {
+                    right: 0;
+                }
+            }
+        }
+    }
+}

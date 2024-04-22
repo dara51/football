@@ -1,0 +1,43 @@
+@use './base/myVariables';
+@import './blocks/header';
+.button_outline {
+    justify-content: center;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid #E2EBF1;
+    border-radius: 7px;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+}
+.header-button  {
+    width: 220px;
+    height: 47px;
+    font-size: 16px;
+    border: 1px solid myVariables.$blue;
+    &::after {
+        position: absolute;
+        content: "Заказать звонок";
+        top: 50%;
+        transform: translateY(-50%);
+        right: 32px;
+        font-weight: 500;
+    }
+    &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        background-image: url('../../vectors/phone-Icon.svg');
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 172px;
+        color: myVariables.$black;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

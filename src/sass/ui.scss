@@ -1,0 +1,65 @@
+@use './base/myVariables';
+@import './libs/fonts';
+body {
+    margin: 0;
+}
+* {
+    font-family: Onest, sans-serif;
+    box-sizing: border-box;
+    color: myVariables.$black;
+}
+.container {
+    margin: 0 auto;
+    width: 1218px;
+    max-width: 96%;
+}
+ul {
+    margin: 0;
+}
+.main-title {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 45.9px;
+    text-align: left;
+    color: myVariables.$black;
+}
+button {
+    border: none;
+    &:focus {
+        outline: none;
+    }
+}
+p {
+    margin: 0
+}
+h3, h2, h1 {
+    margin: 0
+}
+.ui-title {
+    font-size: 38px;
+    margin: 42px 0px;
+}
+.main-content {
+    min-height: 50vh;
+    padding:80px 0;
+    
+}
+.main-link-wrapper {
+    display:flex;
+    flex-direction: column;
+    gap: 25px;
+    a {
+        text-decoration: none;
+        font-size: 24px;
+    }
+}
+
+
+.items-wrapper {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+

@@ -1,0 +1,33 @@
+.sale {
+    margin-top: 60px;
+    .title {
+        width: 189px;
+    }
+    .sale-wrapper {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 565px;
+        
+    }
+}
+@media (max-width:475px) {
+    .sale {
+        margin-top: 30px;
+        .title {
+            width: 150px;
+        }
+        .sale-wrapper {
+            min-height: auto;
+            margin-top: 15px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 10px;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+}

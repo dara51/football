@@ -1,0 +1,174 @@
+@use './base/myVariables';
+@import './blocks//photo';
+@import './blocks/feedback';
+
+body {
+    margin: 0;
+}
+* {
+    font-family: Onest, sans-serif;
+    box-sizing: border-box;
+    color: myVariables.$black;
+}
+.container {
+    margin: 0 auto;
+    width: 1218px;
+    max-width: 96%;
+}
+ul {
+    margin: 0;
+}
+.main-title {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 45.9px;
+    text-align: left;
+    color: myVariables.$black;
+}
+button {
+    border: none;
+    &:focus {
+        outline: none;
+    }
+}
+p {
+    margin: 0
+}
+h3, h2, h1 {
+    margin: 0
+}
+.title {
+    position: relative;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 38.25px;
+    text-align: left;
+    color: myVariables.$black;
+    font-weight: 700;
+    &::after {
+        content: "";
+        position:absolute;
+        width: 32px;
+        height: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -42px;
+        background-size: cover;
+        background-image: url('../vectors/arrow-blue.svg');
+    }
+}
+.title-small {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+    color: myVariables.$black;
+}
+.without-pseudo {
+    &::after,&::before {
+        display: none!important
+    }
+}
+.subheader {
+    margin-top: 20px;
+}
+.application-main {
+    margin-top: 20px;
+    .advantages-item-wrapper {
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+    }
+}
+.purchase {
+    margin-top: 70px;
+    .wrapper {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px
+    }
+}
+.photo {
+    margin-top: 60px;
+}
+.feedback {
+    margin-top: 56px;
+    .title {
+        width: 296px;
+    }
+    .questions-banner {
+        margin-top:60px;
+    }
+}
+
+
+
+@media (max-width:475px) {
+    .container {
+        width: 94.117%;
+        margin: 0 auto;
+    }
+    .title {
+        font-size: 24px;
+        line-height: 36px;
+        &::after {
+            right: -39px;
+        }
+    }
+    .title-small {
+        font-size: 20px;
+        line-height:30px; 
+    }
+    .subheader {
+        margin-top: 90px;
+    }
+    .main-title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: left;
+    }
+    .application-main {
+        margin-top: 15px;
+        .advantages-item-wrapper {
+            margin-top: 10px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+    }
+    .purchase {
+        margin-top: 38px;
+        .wrapper {
+            margin-top: 15px;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+    }
+    .photo {
+        margin-top: 30px;
+    }
+    .feedback {
+        margin-top: 30px;
+        .title {
+            width: 296px;
+        }
+        .questions-banner {
+            margin-top:30px;
+        }
+    }
+}
+
+
+
+@import './libs/fonts';
+@import './blocks/header';
+@import './blocks/mobile-header';
+@import './items/breadcrumbs.scss';
+@import './items/buttons';
+@import './blocks/footer';
+@import './items/card-item.scss';
+@import './items/purchase-item';
+@import './items/question-banner';
+@import './items/advantages-item';

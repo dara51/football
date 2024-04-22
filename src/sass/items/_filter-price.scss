@@ -1,0 +1,93 @@
+.value-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    .input-wrapper {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "От";
+            font-size: 14px;
+            color: #647079;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index:2;
+        }
+    }
+    .input-wrapper.to-value {
+        &::before {
+            content: "до";
+        }
+    }
+    input[type=text] {
+        width: 130px;
+        height: 48px;
+        border-radius: 7px;
+        border: 1px solid #E2EBF1;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: myVariables.$black;
+        padding-left: 45px;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+#slider {
+    border: none;
+    .noUi-tooltip {
+        background-color: transparent;
+        border: none;
+        font-size: 12px;
+        color: #828B92;
+        bottom: -35px;
+    }
+    margin-top: 19px;
+    position: relative;
+    height: 6px;
+    border-radius: 5px;
+    .noUi-base {
+        background-color: #D2DBE2;
+    }
+    .noUi-handle {
+        box-shadow: none;
+        border: none;
+        filter: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        background-color: #0087F9;
+        &::after {
+            display: none;
+        }
+        &::before {
+            width:9.6px ;
+            height: 9.6px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+    }
+    .noUi-target {
+        border: none;
+        box-shadow: none;
+    }
+    .noUi-connect {
+        height: 6px;
+        background: #0087F9;
+
+    }
+    // .noUi-connects {
+    //     height: 6px;
+    //     border-radius: 100%;
+    // }
+}

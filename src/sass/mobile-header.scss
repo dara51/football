@@ -1,0 +1,11 @@
+@use './base/myVariables';
+
+@import './blocks/mobile-header';
+.mobile-header {
+    display: block;
+}
+.mobile-container {
+    position: relative;
+    width: 400px;
+}
+// @import './items/good';

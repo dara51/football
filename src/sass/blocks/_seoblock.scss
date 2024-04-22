@@ -1,0 +1,180 @@
+.seo-block {
+    margin-top: 60px;
+    button {
+        margin-top: 30px;
+    }
+    .wrapper {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+    .seo-content {
+        height: 300px;
+        overflow: hidden;
+    }
+    .seo-content-active {
+        height: auto;
+    }
+    .seo-title {
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 38.25px;
+        text-align: left;
+        color: #1B1B1B;
+    }
+    p {
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28.8px;
+        text-align: left;
+        color: #323F4B;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        width: 48.768%;
+        list-style: circle;
+        color: myVariables.$blue;
+        gap: 15px;
+        padding-left: 20px;
+        li {
+            padding-left: 13px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            color: #323F4B;
+            &::marker {
+                color: myVariables.$blue;
+            }
+        }
+
+    }
+    ol {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-left: 30px;
+        color: myVariables.$blue;
+        width: 48.768%;
+        list-style-type: none;
+        counter-reset: my-counter;
+        li {
+            padding-left: 10px;
+            position: relative;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            color: #323F4B;
+            // &::marker {
+            //     color: myVariables.$blue;
+            // }
+            &::before {
+                content:counter(my-counter) ;
+                counter-increment: my-counter;
+                color: myVariables.$blue;
+                font-size: 16px;
+                font-weight: 700px;
+                line-height: 24px;
+                position: absolute;
+                left: -24px;
+                top: 0;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width:475px) {
+    .seo-block {
+        margin-top: 30px;
+        button {
+            margin-top: 0px;
+        }
+        .wrapper {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+        .seo-title {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 36px;
+            color: myVariables.$black;
+        }
+        p {
+            margin-top: 15px;
+        }
+        .seo-content {
+            position: relative;
+            overflow: hidden;
+            height: 393px;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(360deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+
+            }
+
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            width: 48.768%;
+            list-style: circle;
+            color: myVariables.$blue;
+            gap: 15px;
+            li {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+                color: #323F4B;
+                &::marker {
+                    color: myVariables.$blue;
+                }
+            }
+    
+        }
+        ol {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            color: myVariables.$blue;
+            width: 48.768%;
+            list-style-type: none;
+            counter-reset: my-counter;
+            li {
+                position: relative;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+                color: #323F4B;
+                // &::marker {
+                //     color: myVariables.$blue;
+                // }
+                &::before {
+                    content:counter(my-counter) ;
+                    counter-increment: my-counter;
+                    color: myVariables.$blue;
+                    font-size: 16px;
+                    font-weight: 700px;
+                    line-height: 24px;
+                    position: absolute;
+                    left: -24px;
+                    top: 0;
+                }
+            }
+        }
+    }
+}

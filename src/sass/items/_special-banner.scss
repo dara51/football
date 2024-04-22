@@ -1,0 +1,160 @@
+.special-banner {
+    position: relative;
+    width: 100%;
+    height: 408px;
+    border-radius: 10px;
+    background-color: #273E4F;
+    padding: 60px 70px;
+    overflow: hidden!important;
+    &::after {
+        position: absolute;
+        content: "";
+        right: 52px;
+        width: 598px;
+        height: 100%;
+        max-width: 56%;
+        top: 0px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('../vectors/Rectangle.svg');
+        filter: opacity(.6);
+    }
+    .child-comand {
+        z-index: 0;
+        position: absolute;
+        width: 736px;
+        max-width: 90%;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
+    .one-child {
+        position: absolute;
+        width: 516px;
+        height: 516px;
+        top: 12px;
+        right: 93px;
+        z-index: 2;
+    }
+    .special-banner-content {
+        position: relative;
+        z-index: 6;
+    }
+    .special-banner__title {
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 51px;
+        text-align: left;
+        width: 569px;
+        max-width: 60%;
+        color: #ffff;
+
+    }
+    .fade-pc {
+        display: none;
+    }
+    .price-wrapper {
+        display: flex;
+        flex-direction:row;
+        gap: 26px;
+        align-items: center;
+        .special-banner__price {
+            margin-top: 15px;
+            display: block;
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 38.25px;
+            text-align: left;
+            color: #ffff;
+            padding: 10px;
+            border-radius: 12px;
+            background-color:#E42DC7 ;
+        }
+        .special-banner__descr {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+            text-align: left;
+            color: #EAF3FA;
+
+        }
+    }
+    .button-simple_medium {
+        margin-top: 30px;
+    }
+}
+
+
+@media (max-width:475px) {
+    .special-banner {
+        padding:20px ;
+        height: 248px;
+        &::after {
+            position: absolute;
+            content: "";
+            right: 0px;
+            width: 210px;
+            height: 248px;
+            max-width: none;
+            top: 0px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('../vectors/Rectangle.svg');
+            filter: opacity(.6);
+        }
+        .child-comand {
+            z-index: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            max-width: 90%;
+        }
+        .one-child {
+            position: absolute;
+            width: 420px;
+            height: 300px;
+            top: 12px;
+            right: 93px;
+            z-index: 2;
+            top: auto;
+            bottom: -60px;
+            right: -140px;
+        }
+        .special-banner-content {
+            position: relative;
+            z-index: 4;
+        }
+        .special-banner__title {
+            max-width: none;
+            font-size: 24px;
+            line-height: 31.2px;
+            font-weight: 700;
+        }
+        .fade-pc {
+            display: block;
+        }
+        .fade-mobile {
+            display: none;
+        }
+        .price-wrapper {
+            flex-direction: column;
+            gap: 5px;
+            align-items: flex-start;
+            .special-banner__price {
+                padding: 2px 7px;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 27px;
+                margin-top: 11px;
+            }
+            .special-banner__descr {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+            }
+        }
+        .button-simple_medium {
+            margin-top: 10px;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+.comand-form-item {
+    width: 289px;
+    img {
+        width: 289px;
+        height: 600px;
+    }
+    .comand-form-item__price {
+        margin-top: 6px;
+        padding-left: 8px;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: left;
+        color:#212324;
+    }
+    .comand-form-item__descr {
+        padding-left: 8px;
+        margin-top: 5px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+        color: #647079;
+        width:100%;
+
+    }
+}
+.comand-form-item.second-type {
+    img {
+        width: 100%;
+        height: 289px;
+    }
+    .wrapper {
+        position: relative;
+        .star-rating {
+            padding-left: 29px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 6px;
+            right: 10px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            color: #828B92;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 24px;
+                height: 24px;
+                background-size: cover;
+                background-image: url('../vectors/star.svg');
+            }
+        }
+    }
+}
+@media (max-width:475px) {
+    .comand-form-item {
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: 155px;
+        img {
+            width:100%;
+            height: 292px;
+        }
+        .comand-form-item__price {
+            margin-top: 10px;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 36px;
+            text-align: left;
+            color:#212324;
+        }
+        .comand-form-item__descr {
+            margin-top: 5px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            text-align: left;
+            color: #647079;
+            width: 100%;
+    
+        }
+    }
+}

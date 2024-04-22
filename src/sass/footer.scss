@@ -1,0 +1,36 @@
+@use './base/myVariables';
+
+
+@import './blocks/footer';
+.button_pink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 167px;
+    height: 55px;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    background-color:#E42DC7;
+}
+.footer_pink {
+    width:194px ;
+}
+
+
+
+@media(max-width:475px) {
+    .button_pink {
+        width: 151px;
+        height: 47px;
+    }
+    .footer_pink {
+        height: 56px;
+        width: 100%;
+    }
+}

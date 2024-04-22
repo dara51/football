@@ -1,0 +1,44 @@
+.breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap:35px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .breadcrumb {
+        flex-shrink: 0;
+        position: relative;
+        display: block;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: #828B92;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            right: -25px;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+            background-size: cover;
+            background-image: url('../vectors/Arrow-grey.svg');
+        }
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+    }
+    .outline-buttons-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

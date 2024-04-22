@@ -1,0 +1,32 @@
+@import '../items/blog-item';
+.carousel-blog-wrapper {
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 380px;
+    position: relative;
+    .carousel-blog {
+        scroll-behavior: smooth;
+        border-radius: 10px;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        width: 100%;
+        height: 100%;
+        overflow-x: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        overflow-y: hidden;
+
+    }
+}
+@media (max-width:475px) {
+    .carousel-blog-wrapper {
+        .carousel-blog {
+            width: 100%;
+            gap: 10px;
+    
+        }
+    }
+}

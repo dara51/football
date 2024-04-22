@@ -1,0 +1,39 @@
+@import '../items/feedback-item';
+@import '../items/telegram-banner';
+.feedback {
+    margin-top: 99px;
+    .title {
+        width: 298px;
+    }
+    .feedback-item-wrapper {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        flex-wrap: nowrap;
+    }
+    .telegram-banner {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width:475px) {
+    .feedback {
+        margin-top: 30px;
+        .title {
+            width: 234px;
+        }
+        .feedback-item-wrapper {
+            margin-top: 15px;
+            gap: 10px;
+            overflow-x: auto;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        .telegram-banner {
+            margin-top: 30px;
+        }
+    }
+}

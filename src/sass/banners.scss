@@ -1,0 +1,93 @@
+@use './base/myVariables';
+
+.form-item-button {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 138px;
+    height: 42px;
+    border-radius: 7px;
+    background-color: myVariables.$blue;
+    border: none;
+        text-align: center;
+        font-size: 16px;
+        color: #ffff;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        img {
+            width: 24px;
+            height: 24px;
+            align-items: center;
+        }
+    
+    &:focus {
+        outline: none;
+    }
+}
+.form-item-button_large {
+    width:179px ;
+    height: 47px;
+}
+.form-item-button_extra-large {
+    width:191px ;
+    height: 55px;
+}
+.button_pink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 167px;
+    height: 55px;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    background-color:#E42DC7;
+
+}
+.pink-button_large {
+    background-color:#E42DC7; 
+    width: auto;
+    height: auto;
+    padding: 15px 32px 16px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    border: none;
+    color: #fff;
+    border-radius: 7px;
+}
+.button-simple_medium {
+    display: block;
+    border: none;
+    width: 233px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    background-color: myVariables.$blue;
+    border-radius: 7px;
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+}
+@import './items/banner-number';
+@import './items/banner';
+@import './items/special-banner';
+@import './items/question-banner';
+@import './items/telegram-banner';

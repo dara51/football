@@ -1,0 +1,88 @@
+.social-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+.social-button {
+    display: block;
+    position: relative;
+    display: flex;
+    align-items: bottom;
+    border-radius: 99px;
+    padding: 5px 15px;
+    padding-left: 49px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    span {
+        display: flex;
+        align-items: center;
+        color: #ffff;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+}
+.social-button.vk {
+    background-color:#0077FF ;
+    &::after {
+        background-image: url('../vectors/vk.svg');
+    }
+}
+.social-button.ok {
+    background-color:#EE8208 ;
+    &::after {
+        background-image: url('../vectors/ok.svg');
+    }
+}
+.social-button.instagram {
+    background-color:#DF4380 ;
+    &::after {
+        background-image: url('../vectors/insta.svg');
+    }
+}
+.social-button.facebook {
+    background-color:#148FE6 ;
+    &::after {
+        background-image: url('../vectors/facebook.svg');
+    }
+}
+.social-button.email {
+    background-color:#4D4B63 ;
+    &::after {
+        background-image: url('../vectors/email.svg');
+    }
+}
+@media (max-width:475px) {
+    .social-buttons {
+        gap: 10px;
+        justify-content: space-between;
+        overflow-x: hidden;
+    }
+    .social-button {
+        width: 54px;
+        padding: 0;
+        height: 34px;
+        flex-shrink: 1;
+        flex-grow: 1;
+        span {
+            display: none;
+        }
+        &::after {
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

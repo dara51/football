@@ -1,0 +1,101 @@
+.expanded-list{
+    cursor: pointer;
+    width: 320px;
+    border-radius:7px;
+    border: 1px solid #E2EBF1 ;
+    background-color:#F3F8FC ;
+    .expanded-list__title {
+        position: relative;
+        padding: 10px 15px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color:#212324;
+        &::after {
+            content: "";
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background-size: cover;
+            background-image: url('../vectors/arrow-down.svg');
+        }
+    }
+    .radio-form {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        padding-bottom: 14px;
+    }
+    .input-wrapper {
+        padding: 0px 15px;
+        align-items: center;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        .radio  {
+            display: none;
+        }
+        label {
+            cursor: pointer;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+        .custom-radio {
+            background-color: #ffff;
+            position: relative;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 1px solid #D2DBE2;
+            &::after {
+                display: none;
+                content: "";
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background-color:#0087F9 ;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                border-radius: 50%;
+            }
+        }
+        .radio:checked~ .custom-radio::after {
+            display: block;
+        }
+        .input-descr {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28.8px;
+            text-align: left;
+            color: #647079;
+        }
+    }
+
+}
+.expanded-list.active {
+    .expanded-list__title {
+        &::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+    .radio-form {
+        display: flex;
+    }
+}
+@media(max-width:475px) {
+    .expanded-list {
+        width: 100%;
+    }
+}

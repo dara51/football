@@ -1,0 +1,75 @@
+.checkbox-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    input[type=checkbox] {
+        width: 24px;
+        height: 24px;
+
+    }
+    label {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color:#647079;
+    }
+}
+.color-wrapper {
+    label {
+        gap: 12px;
+        display: flex;
+        flex-direction: row;
+        &::before {
+            content: "";
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            gap: 12px;
+        }
+    }
+}
+.color-wrapper.color-white label::before {
+    background-color: #ffff;
+}
+.color-wrapper.color-black label::before {
+    background-color: myVariables.$black;
+}
+.color-wrapper.color-red label::before {
+    background-color: #FF0000;
+}
+.color-wrapper.color-blue label::before {
+    background-color: #0066FF;
+}
+.color-wrapper.color-green label::before {
+    background-color: #00E324;
+}
+.value-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    input[type=text] {
+        position: relative;
+        width: 130px;
+        height: 48px;
+        border-radius: 7px;
+        border: 1px solid #E2EBF1;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: myVariables.$black;
+        padding-left: 45px;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: black;
+            width: 24px;
+            height: 24px;
+            
+        }
+    }
+}

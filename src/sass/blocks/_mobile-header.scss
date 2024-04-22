@@ -1,0 +1,100 @@
+@import '../items/navigation-item';
+@import '../items/mobile-expand-menu';
+@import '../items/search-menu.scss';
+@import '../items/mobile-main-menu';
+@import '../items/good' ;
+@import '../items/clubs-logo';
+.mobile-header {
+    max-width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 15px 0px;
+    display: none;
+    width: 100%;
+    background-color: #ffff;
+    z-index: 9;
+    border-bottom: 1px solid #E2EBF1;
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .mobile-logo {
+            width: 96px;
+            height: 45px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .hamburger {
+            padding-top:7.5px ;
+            display: flex;
+            flex-direction: column;
+            width: 36px;
+            height: 36px;
+            gap: 6px;
+            align-items: center;
+            cursor: pointer;
+            span {
+                width: 27px;
+                height: 4px;
+                border-radius: 40px;
+                background-color:#242328 ;
+            }
+
+        }
+    }
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #ffff;
+        z-index: 11;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        .close-btn {
+            width: 36px;
+            height: 36px;
+            background-size: cover;
+            background-image:url('../vectors/close.svg') ;
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            cursor: pointer;
+            z-index: 20;
+        }
+        .navigation-panel {
+            width: 100%;
+            height: 77px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            padding:0px 8px ;
+            padding-top: 10px;
+            background-color: myVariables.$grey1;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 20;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width:475px) {
+    .mobile-header {
+        display: block;
+    }
+}

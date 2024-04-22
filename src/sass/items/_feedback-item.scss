@@ -1,0 +1,90 @@
+.feedback-item {
+    position: relative;
+    width: 594px;
+    height: 475px;
+    border: 1px solid #E2EBF1;
+    border-radius: 15px;
+    padding: 30px;
+    .feedback-item__title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 27px;
+        text-align: left;
+        color: myVariables.$black;
+    }
+    .feedback-item__subtitle {
+        margin-top: 6px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color:#828B92 ;
+    }
+    .feedback-item__descr {
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28.8px;
+        text-align: left;
+        color:myVariables.$black;
+    }
+    .feedback-rating {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        display: flex;
+        flex-direction: row;
+        width: 120px;
+        height: 20px;
+        gap: 5px;
+        .rate-star {
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+            background-image: url('../../vectors/star.svg');
+        }
+    }
+
+}
+
+@media ( max-width:475px) {
+    .feedback-item {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        width: 88.125%;
+        height: auto;
+        padding: 20px 15px;
+        padding-bottom: 15px;
+        .feedback-item__title {
+            order: 1;
+        }
+        .feedback-item__subtitle {
+            margin-top: 5px;
+            order: 2;
+        }
+        .feedback-item__descr {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 24px;
+            order: 4;
+        }
+        .feedback-rating {
+            order: 3;
+            margin-top: 5px;
+            position: static;
+            display: flex;
+            flex-direction: row;
+            width: 120px;
+            height: 20px;
+            gap: 5px;
+            .rate-star {
+                width: 20px;
+                height: 20px;
+                background-size: cover;
+                background-image: url('../../vectors/star.svg');
+            }
+        }
+    
+    }
+}

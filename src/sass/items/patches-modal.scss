@@ -1,0 +1,72 @@
+.patches-modal {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 202px;
+    height: 246px;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-shadow: 0px 4px 25px 0px #00000026;
+    background-color: #ffff;
+    z-index: 8;
+    .patches-title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: left;
+        color:#212324 ;
+
+    }
+    .patches-form {
+        margin-top: 15px;
+    }
+    .patches-close {
+        cursor: pointer;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        right: 15px;
+        top: 15px;
+        background-size: cover;
+        background-image: url('../vectors/size-modal-close.svg');
+    }
+    .input-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        .patches-input {
+            cursor: pointer;
+            width: 71px;
+            height: 71px;
+            overflow: hidden;
+            border-radius: 7px;
+            border: 1px solid #E2EBF1;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .patches-input.active {
+            border-color: #E42DC7;
+        }
+    }
+    .patches-button {
+        margin-top: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        border-radius: 7px;
+        width: 100%;
+        height: 40px;
+        background-color: myVariables.$blue;
+        border: none;
+    }
+}

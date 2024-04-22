@@ -1,0 +1,596 @@
+a {
+    text-decoration: none;
+}
+
+.button_outline {
+    justify-content: center;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid #E2EBF1;
+    border-radius: 7px;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+}
+.filter-outline {
+    width: 100%;
+    height: 56px;
+    border: 1px solid myVariables.$blue;
+    color: #0087F9;
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: center;
+}
+.filter-submit {
+    width: 100%;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    background-color: myVariables.$blue;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close-button {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    z-index: 11;
+    background-size: cover;
+    background: url('../vectors/close.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.button_outline.simple {
+    color: myVariables.$black;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 3.5px 20px 3.5px 20px;
+    border-radius: 39px;
+}
+
+.button_outline-active.simple {
+    background-color: myVariables.$blue;
+    color: #ffff;
+}
+.button_outline.simple.filter {
+    font-size: 14px;
+    line-height: 21px;
+}
+.outline_large {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: myVariables.$blue;
+    border:1px solid myVariables.$blue;
+}
+#seo-btn{
+    transition: .5s;
+    &::before {
+        content: "Читать подробнее";
+        
+    }
+}
+#seo-btn.seo-btn-active {
+    &::before{
+        content: "Скрыть текст";
+    }
+}
+.outline_single {
+    width: 237px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #647079;
+    border:1px solid #D2DBE2;
+}
+.filter-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 140px;
+    height: 42px;
+    border-radius: 7px;
+    border: 1px solid myVariables.$blue;
+    color: myVariables.$blue;
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 20px;
+    padding-left: 50px;
+    &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 16px;
+        background-size: cover;
+        background-image: url('../vectors/filter.svg');
+    }
+}
+.sort-button {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    background-color: transparent;
+    color:#647079;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url('../vectors/arroww.svg');
+        display: none;
+    }
+    &:focus {
+        color: myVariables.$blue;
+        padding-right: 29px;
+        &::after {
+            display: block;
+        }
+
+    }
+}
+.sort-button-active {
+    &::after {
+        transform: translateY(-50%) rotate(180deg);
+    } 
+}
+.sizes-popup-btn {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: myVariables.$blue;
+    cursor: pointer;
+
+}
+.button-empty {
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    &:focus {
+        outline: none;
+    }
+    width: 99px;
+    color:#828B92 ;
+    font-size: 14px;
+    height: 21px;
+    &::before {
+        position: absolute;
+        content: 'Развернуть';
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+    }
+    &::after {
+        transition: .5s;
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 16px;
+        height: 16px;
+        background-size: cover;
+        background-image: url('../vectors/Arrow-grey.svg');
+        transform: translateY(-50%) rotate(-90deg);
+    }
+    
+}
+.button-empty-active {
+    &::before {
+        content: "Свернуть";
+    }
+    &::after {
+        transform: translateY(-50%) rotate(90deg);
+    }
+}
+
+.header-button  {
+    width: 220px;
+    height: 47px;
+    font-size: 16px;
+    border: 1px solid myVariables.$blue;
+    &::after {
+        position: absolute;
+        content: "Заказать звонок";
+        top: 50%;
+        transform: translateY(-50%);
+        right: 32px;
+        font-weight: 500;
+    }
+    &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        background-image: url('../vectors/phone-Icon.svg');
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 172px;
+        color: myVariables.$black;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+.carousel-button {
+    display: block;
+    border: none;
+    width: 248px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    background-color: myVariables.$blue;
+    border-radius: 7px;
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+}
+.button-simple_medium {
+    display: block;
+    border: none;
+    width: 233px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    background-color: myVariables.$blue;
+    border-radius: 7px;
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+}
+.button-simple_small {
+    cursor: pointer;
+    display: block;
+    border: none;
+    width: 200px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    background-color: myVariables.$blue;
+    border-radius: 7px;
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+}
+.select-buttons {
+    display: flex;
+    flex-direction: row;
+    gap:15px ;
+    .select-button {
+        cursor: pointer;
+        transition: .5s;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        color: myVariables.$black ;
+        padding: 5px 20px 5px 20px;
+        border-radius: 39px;
+    }
+    .select-button-active {
+        background-color: myVariables.$blue;
+        color: #ffff;
+    }
+}
+.goods-button {
+    width: 100%;
+    height: 48px;
+    border-radius: 7px;
+    border: none;
+    background-color: myVariables.$blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    color: #ffff;
+    font-size:16px;
+    font-weight: 500;
+    line-height: 24px;
+    img {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+.goods-button_large {
+    width:237px;
+    height: 56px;
+}
+a.one-click {
+    display: block;
+    width: 116px;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: #828B92;
+}
+.form-item-button {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 138px;
+    height: 42px;
+    border-radius: 7px;
+    background-color: myVariables.$blue;
+    border: none;
+        text-align: center;
+        font-size: 16px;
+        color: #ffff;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        img {
+            width: 24px;
+            height: 24px;
+            align-items: center;
+        }
+    
+    &:focus {
+        outline: none;
+    }
+}
+.form-item-button_large {
+    width:179px ;
+    height: 47px;
+}
+.form-item-button_extra-large {
+    width:191px ;
+    height: 55px;
+}
+.button_pink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 167px;
+    height: 55px;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    background-color:#E42DC7;
+
+}
+.pagination-button {
+    background-color:#F3F8FC ;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color:myVariables.$black;
+}
+.pagination-button-active {
+    color: #ffff;
+    background-color: myVariables.$blue;
+}
+.pink-button_large {
+    background-color:#E42DC7; 
+    width: auto;
+    height: auto;
+    padding: 15px 32px 16px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    border: none;
+    color: #fff;
+    border-radius: 7px;
+}
+.pink-button_extra {
+    background-color:#E42DC7; 
+    width: 100%;
+    height: 55px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    border: none;
+    color: #fff;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quantity-button {
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19.5px;
+    height: 19.5px;
+    border-radius: 7px;
+    border: 2px solid #D2DBE2;
+    color: #828B92;
+    &::after {
+        content: "";
+        font-size: 20px;
+        line-height: 15px;
+    }
+}
+.minus-button::after {
+    content: "-"
+}
+.plus-button::after {
+    content: "\002B";
+    width:10.5px;
+    height: 13.5px;
+}
+.simple-button_large {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    border-radius: 7px;
+    width: 100%;
+    height: 55px;
+    background-color: myVariables.$blue;
+    border: none;
+}
+.simple-button_large_outline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #D2DBE2;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    border-radius: 7px;
+    width: 100%;
+    height: 55px;
+    background-color: transparent;
+    border: 1px solid #D2DBE2;
+}
+.footer_pink {
+    width:194px ;
+}
+@import './social-buttons';
+
+@media (max-width:475px) {
+    .carousel-button {
+        width: 62.5%;
+    }
+    .select-buttons {
+        .select-button {
+            padding: 4px 20px 4px 20px;
+        }
+    }
+    .form-item-button_extra-large {
+        width:179px ;
+        height: 47px;
+        font-size: 16px;
+    }
+    .button_pink {
+        width: 151px;
+        height: 47px;
+    }
+    .footer_pink {
+        height: 56px;
+        width: 100%;
+    }
+    .close-button {
+        width: 36px;
+        height: 36px;
+    }
+    .filter-button {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        &::before {
+            left: 102px;
+        }
+    }
+    .goods-button_large {
+        width:100%;
+        height: 56px;
+    }
+    .outline_single {
+        width: 100%;
+    }
+    .pink-button_large {
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        width: 100%;
+    }
+    .button-simple_medium {
+        width: 200px;
+        height: 48px;
+    }
+    .button-simple_small {
+        width: 100%;
+    }
+
+}

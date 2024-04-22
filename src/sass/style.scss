@@ -1,0 +1,89 @@
+@use './base/myVariables';
+@import './libs/fonts';
+body {
+    margin: 0;
+}
+* {
+    font-family: Onest, sans-serif;
+    box-sizing: border-box;
+}
+.container {
+    margin: 0 auto;
+    width: 1218px;
+    max-width: 96%;
+}
+ul,ol {
+    margin: 0;
+}
+button {
+    border: none;
+    &:focus {
+        outline: none;
+    }
+}
+p {
+    margin: 0
+}
+h3, h2, h1 {
+    margin: 0
+}
+.title {
+    position: relative;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 38.25px;
+    text-align: left;
+    color: myVariables.$black;
+    font-weight: 700;
+    &::after {
+        content: "";
+        position:absolute;
+        width: 32px;
+        height: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -42px;
+        background-size: cover;
+        background-image: url('../vectors/arrow-blue.svg');
+    }
+}
+.without-pseudo {
+    &::after,&::before {
+        display: none!important;
+    }
+}
+
+@import './items/good';
+@import './items/clubs-logo';
+@import './blocks/header.scss';
+@import './items/buttons';
+@import './blocks/firstScreen.scss';
+@import './blocks/popular-clubs';
+@import './blocks/popular-national';
+@import './blocks/popular-goods';
+@import './items/most-popular-item';
+@import './blocks/popular-players';
+@import './blocks/sale';
+@import './blocks/atributika';
+@import './blocks/feedback';
+@import './blocks/photo';
+@import './blocks/questions';
+@import './blocks/blog';
+@import './blocks/footer';
+@import './blocks/mobile-header';
+@import './items/carousel-dots';
+
+
+@media (max-width:475px) {
+    .container {
+        width: 94.117%;
+        margin: 0 auto;
+    }
+    .title {
+        font-size: 24px;
+        line-height: 36px;
+        &::after {
+            right: -39px;
+        }
+    }
+}

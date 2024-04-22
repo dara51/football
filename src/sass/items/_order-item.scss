@@ -1,0 +1,85 @@
+@use '../base/myVariables';
+.order-item {
+    width: 392px;
+    height: auto;
+    border-radius: 10px;
+    background-color: myVariables.$grey1;
+    padding: 25px 30px;
+    .values-wrapper {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+    }
+    .values-row {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+    .values__title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+    }
+    .filler {
+        width: auto;
+        border-bottom: 1px solid #D2DBE2;
+        flex-grow: 1;
+    }
+    .values__content {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: left;
+        color: #647079;
+    }
+    .values__content.total {
+        color: #212324;
+    }
+    .promocode {
+        margin-top: 20px;
+        background-color: #ffff;
+        border: 1px solid #E2EBF1;
+        border-radius: 7px;
+        color: #212324;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        width: 100%;
+        height: 48px;
+        padding-left: 15px;
+        &::placeholder {
+            color: #212324;
+        }
+    }
+    .simple-button_large {
+        margin-top: 30px;
+    }
+    .simple-button_large_outline {
+        margin-top: 15px;
+    }
+}
+@media (max-width:475px) {
+    .order-item {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        .values-wrapper {
+            margin-top: 10px;
+        }
+        .values-row {
+            gap: 4px;
+        }
+        .promocode {
+            margin-top: 22px;
+        }
+        .simple-button_large {
+            margin-top: 20px;
+        }
+        .order-title {
+            font-size: 24px;
+        }
+    }
+}

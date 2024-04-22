@@ -1,0 +1,45 @@
+@use './base/myVariables';
+
+
+
+
+@import './items/forms-item';
+@import './items/popular-players-item';
+@import './items/blog-item';
+@import './items/comand-form-item';
+@import './items/advantages-item';
+.form-item-button {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 138px;
+    height: 42px;
+    border-radius: 7px;
+    background-color: myVariables.$blue;
+    border: none;
+        text-align: center;
+        font-size: 16px;
+        color: #ffff;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        img {
+            width: 24px;
+            height: 24px;
+            align-items: center;
+        }
+    
+    &:focus {
+        outline: none;
+    }
+}
+.form-item-button_large {
+    width:179px ;
+    height: 47px;
+}
+.form-item-button_extra-large {
+    width:191px ;
+    height: 55px;
+}

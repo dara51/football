@@ -1,0 +1,45 @@
+@import '../items/popular-players-item';
+
+.popular-players {
+    margin-top: 60px;
+    .title {
+        width: 305px;
+    }
+    .main-wrapper {
+        position: relative;
+    }
+    .popular-players-wrapper {
+        -ms-overflow-style: none;
+        scroll-behavior: smooth;
+        position: relative;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 20px;
+        overflow-x: auto;
+        .first-row,.second-row {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-shrink: 0;
+        }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:475px) {
+    .popular-players {
+        margin-top: 30px;
+        .title {
+            width: 241px;
+        }
+        .popular-players-wrapper {
+            margin-top: 15px;
+            gap: 9px;
+        }
+    }
+   
+}
